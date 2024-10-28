@@ -11,16 +11,17 @@
 namespace Codeception\Module;
 
 use Codeception\{
-  Module,
-  TestInterface
-}  
+    Module,
+    TestInterface,
+    Email\TestsEmails,
+    Email\EmailServiceProvider
+};  
+
 
 class MailHog extends Module
 {
-  use \Codeception\Email\{
-      TestsEmails,
-      EmailServiceProvider
-  }
+  use TestsEmails;
+  use EmailServiceProvider;
   /**
    * HTTP Client to interact with MailHog
    *
