@@ -58,7 +58,7 @@ class MailHog extends Module
    *
    * @var array
    */
-  protected $config = array('url', 'port', 'guzzleRequestOptions', 'deleteEmailsAfterScenario', 'timeout');
+  protected array $config = ['url', 'port', 'guzzleRequestOptions', 'deleteEmailsAfterScenario', 'timeout'];
 
   /**
    * Codeception required variables
