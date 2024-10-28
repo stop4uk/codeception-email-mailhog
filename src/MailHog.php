@@ -65,7 +65,7 @@ class MailHog extends Module
    *
    * @var array
    */
-  protected $requiredFields = array('url', 'port');
+  protected array $requiredFields = ['url', 'port'];
 
   public function _initialize()
   {
