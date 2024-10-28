@@ -10,14 +10,17 @@
 
 namespace Codeception\Module;
 
-use Codeception\Module;
+use Codeception\{
+  Module,
+  TestInterface
+}  
 
 class MailHog extends Module
 {
-  use \Codeception\Email\TestsEmails;
-
-  use \Codeception\Email\EmailServiceProvider;
-
+  use \Codeception\Email\{
+      TestsEmails,
+      EmailServiceProvider
+  }
   /**
    * HTTP Client to interact with MailHog
    *
@@ -86,7 +89,7 @@ class MailHog extends Module
   /**
    * Method executed after each scenario
    */
-  public function _after(\Codeception\TestCase $test)
+  public function _after(TestInterface $test)
   {
     if(isset($this->config['deleteEmailsAfterScenario']) && $this->config['deleteEmailsAfterScenario'])
     {
